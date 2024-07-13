@@ -3,7 +3,7 @@ import type { ImageWidget } from "apps/admin/widgets.ts";
 
 const Footer: React.FC = () => {
   return (
-    <footer className="bg-cyan-800 text-white py-12">
+    <footer className="bg-cyan-800 text-white py-12 font-serif">
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row justify-between items-start">
           <div className="flex flex-col space-y-6"> {/* Increased space between lines */}
@@ -14,9 +14,9 @@ const Footer: React.FC = () => {
               height="50"
             />
             <p className="max-w-xs">
-              HealthSpace was created for the new ways we live and work.{" "}
+              HealthSpace was created for the new ways we live and eat.{" "}
               <br className="hidden md:block" />
-              We make a better workspace around the world.
+              We make a better lifestyle around the world.
             </p>
             <div className="flex space-x-3">
               <a href="/" className="hover:underline">Terms & privacy</a>
@@ -57,7 +57,7 @@ const Footer: React.FC = () => {
               <p className="mb-4 text-center">
                 Get started for free.
               </p>
-              <button className="bg-white text-teal-800 p-2 rounded hover:bg-teal-600 hover:text-white">Start today</button>
+              <button className="bg-white text-cyan-800 p-2 rounded hover:bg-cyan-800 hover:text-white">Start today</button>
               <div className="flex space-x-6 mt-6">
                 <a href="/" className="hover:underline">
                   <Image

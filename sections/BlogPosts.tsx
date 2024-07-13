@@ -39,7 +39,7 @@ const BlogPosts = ({
             <h2 className="text-4xl leading-snug font-serif text-cyan-900 font-bold">
               {title}
             </h2>
-            <p className="text-lg font-serif text-cyan-900">
+            <p className="text-lg font-serif text-cyan-800">
               {description}
             </p>
 
@@ -51,7 +51,7 @@ const BlogPosts = ({
                 </legend>
                 <div className="flex flex-wrap gap-4">
                   <div className="flex flex-col">
-                    <label htmlFor="vegetarian" className="font-serif text-cyan-900">
+                    <label htmlFor="vegetarian" className="font-serif text-cyan-800">
                       Vegetarian: &nbsp;
                       <select id="vegetarian" name="vegetarian" className="border border-gray-300 rounded-md p-2">
                         <option value="yes">Yes</option>
@@ -60,7 +60,7 @@ const BlogPosts = ({
                     </label>
                   </div>
                   <div className="flex flex-col">
-                    <label htmlFor="vegan" className="font-serif text-cyan-900">
+                    <label htmlFor="vegan" className="font-serif text-cyan-800">
                       Vegan: &nbsp;
                       <select id="vegan" name="vegan" className="border border-gray-300 rounded-md p-2">
                         <option value="yes">Yes</option>
@@ -69,7 +69,7 @@ const BlogPosts = ({
                     </label>
                   </div>
                   <div className="flex flex-col">
-                    <label htmlFor="gluten-free" className="font-serif text-cyan-900">
+                    <label htmlFor="gluten-free" className="font-serif text-cyan-800">
                       Gluten-free: &nbsp;
                       <select id="gluten-free" name="gluten-free" className="border border-gray-300 rounded-md p-2">
                         <option value="yes">Yes</option>
@@ -78,7 +78,7 @@ const BlogPosts = ({
                     </label>
                   </div>
                   <div className="flex flex-col">
-                    <label htmlFor="lactose-intolerant" className="font-serif text-cyan-900">
+                    <label htmlFor="lactose-intolerant" className="font-serif text-cyan-800">
                       Lactose intolerant: &nbsp;
                       <select id="lactose-intolerant" name="lactose-intolerant" className="border border-gray-300 rounded-md p-2">
                         <option value="yes">Yes</option>
@@ -87,7 +87,7 @@ const BlogPosts = ({
                     </label>
                   </div>
                   <div className="flex flex-col">
-                    <label htmlFor="halal" className="font-serif text-cyan-900">
+                    <label htmlFor="halal" className="font-serif text-cyan-800">
                       Halal: &nbsp;
                       <select id="halal" name="halal" className="border border-gray-300 rounded-md p-2">
                         <option value="yes">Yes</option>
@@ -96,7 +96,7 @@ const BlogPosts = ({
                     </label>
                   </div>
                   <div className="flex flex-col">
-                    <label htmlFor="kosher" className="font-serif text-cyan-900">
+                    <label htmlFor="kosher" className="font-serif text-cyan-800">
                       Kosher: &nbsp;
                       <select id="kosher" name="kosher" className="border border-gray-300 rounded-md p-2">
                         <option value="yes">Yes</option>
@@ -105,7 +105,7 @@ const BlogPosts = ({
                     </label>
                   </div>
                   <div className="flex flex-col">
-                    <label htmlFor="low-carb" className="font-serif text-cyan-900">
+                    <label htmlFor="low-carb" className="font-serif text-cyan-800">
                       Low-carb: &nbsp;
                       <select id="low-carb" name="low-carb" className="border border-gray-300 rounded-md p-2">
                         <option value="yes">Yes</option>
@@ -114,7 +114,7 @@ const BlogPosts = ({
                     </label>
                   </div>
                   <div className="flex flex-col">
-                    <label htmlFor="low-fat" className="font-serif text-cyan-900">
+                    <label htmlFor="low-fat" className="font-serif text-cyan-800">
                       Low-fat: &nbsp;
                       <select id="low-fat" name="low-fat" className="border border-gray-300 rounded-md p-2">
                         <option value="yes">Yes</option>
@@ -123,7 +123,7 @@ const BlogPosts = ({
                     </label>
                   </div>
                   <div className="flex flex-col">
-                    <label htmlFor="other" className="font-serif text-cyan-900">
+                    <label htmlFor="other" className="font-serif text-cyan-800">
                       Other (please specify): &nbsp;
                       <input type="text" id="other" name="other" className="border border-gray-300 rounded-md p-2" />
                     </label>
@@ -136,7 +136,7 @@ const BlogPosts = ({
                   Section 2: Unique Restrictions
                 </legend>
                 <div className="flex flex-col gap-4">
-                  <label htmlFor="unique-restrictions" className="font-serif text-cyan-900">
+                  <label htmlFor="unique-restrictions" className="font-serif text-cyan-800">
                     Do you have any other dietary restrictions or preferences not listed above?
                   </label>
                   <textarea
@@ -155,7 +155,7 @@ const BlogPosts = ({
                 </legend>
                 <div className="flex flex-wrap gap-4">
                   <div className="flex flex-col">
-                    <label className="font-serif text-cyan-900">
+                    <label className="font-serif text-cyan-800">
                       Allergies: &nbsp;
                       <div className="flex gap-2 mt-2">
                         <label htmlFor="allergy-peanuts" className="inline-flex items-center">
@@ -170,7 +170,7 @@ const BlogPosts = ({
                     </label>
                   </div>
                   <div className="flex flex-col">
-                    <label htmlFor="food-dislikes" className="font-serif text-cyan-900">
+                    <label htmlFor="food-dislikes" className="font-serif text-cyan-800">
                       Food dislikes: &nbsp;
                       <input type="text" id="food-dislikes" name="food-dislikes" className="border border-gray-300 rounded-md p-3 mt-4" placeholder="Enter foods you dislike or prefer to avoid..." />
                     </label>

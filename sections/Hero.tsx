@@ -11,7 +11,7 @@ export default function HeroFlats() {
                     <div class="space30"></div>
                     <div class="dual-btn">
                        <button
-                          class="rounded-lg bg-[#003642] py-3 px-6 text-center align-middle font-serif text-xs font-bold uppercase text-white shadow-md shadow-gray-900/10 transition-all hover:shadow-lg hover:shadow-gray-900/20 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+                          class="rounded-lg bg-[#003642] py-3 px-6 text-center align-middle font-sans text-xs font-bold uppercase text-white shadow-md shadow-gray-900/10 transition-all hover:shadow-lg hover:shadow-gray-900/20 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
                           type="button">
                           Try HealthSpace free
                       </button>

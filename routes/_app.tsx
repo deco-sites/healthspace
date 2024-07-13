@@ -28,6 +28,7 @@ export default defineApp(async (_req, ctx) => {
 
         {/* Web Manifest */}
         <link rel="manifest" href={asset("/site.webmanifest")} />
+        <link rel='stylesheet' href="style.css" />
       </Head>
 
       {/* Rest of Preact tree */}

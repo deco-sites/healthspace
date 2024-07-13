@@ -143,7 +143,7 @@ const BlogPosts = ({
                     id="unique-restrictions"
                     name="unique-restrictions"
                     rows={4}
-                    className="border border-gray-300 rounded-lg p-2"
+                    className="border border-gray-300 rounded-lg p-2 font-serif text-cyan-800"
                     placeholder="Enter your unique restrictions..."
                   />
                 </div>
@@ -172,7 +172,7 @@ const BlogPosts = ({
                   <div className="flex flex-col">
                     <label htmlFor="food-dislikes" className="font-serif text-cyan-800">
                       Food dislikes: &nbsp;
-                      <input type="text" id="food-dislikes" name="food-dislikes" className="border border-gray-300 rounded-md p-3 mt-4" placeholder="Enter foods you dislike or prefer to avoid..." />
+                      <input type="text" id="food-dislikes" name="food-dislikes" className= "border border-gray-300 rounded-md p-3 mt-4" placeholder= "Enter foods you dislike or prefer to avoid..." />
                     </label>
                   </div>
                 </div>

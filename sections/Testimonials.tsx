@@ -1,4 +1,3 @@
-import type { ImageWidget } from "apps/admin/widgets.ts";
 import Image from "apps/website/components/Image.tsx";
 import Icon from "../components/ui/Icon.tsx";
 import Slider from "../components/ui/Slider.tsx";
@@ -46,34 +45,34 @@ const DEFAULT_PROPS = {
     {
       content: {
         description:
-          "HealthSpace has transformed our workplace with its innovative personalized recipe generation, making meal planning effortless and enjoyable.",
+          "HealthSpace has made meal planning in our household effortless and enjoyable with its innovative personalized recipe generation. I would definitely recommend it!",
         avatar:
           "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/1527/0f78fa1e-c564-485b-a161-7a214c660a9b",
-        alt: "Oberon Shaw",
-        name: "Oberon Shaw, MCH",
-        position: "Head of Talent Acquisition, North America",
+        alt: "Person 1",
+        name: "Alice Smith",
+        location: "New York, USA",
       },
     },
     {
       content: {
         description:
-          "HealthSpace has revolutionized our team's dietary habits with its personalized recipe generation feature, fostering healthier lifestyles and greater productivity.",
+          "Our family's dietary habits have improved significantly thanks to HealthSpace's personalized recipe generation feature, making healthier eating a breeze.",
         avatar:
           "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/1527/7286de42-e9c5-4fcb-ae8b-b992eea4b78e",
-        alt: "Oberon Shaw",
-        name: "Oberon Shaw, MCH",
-        position: "Head of Talent Acquisition, North America",
+        alt: "Person 2",
+        name: "John Doe",
+        location: "London, UK",
       },
     },
     {
       content: {
         description:
-          "HealthSpace's personalized recipe generation has been a game-changer for our organization, promoting wellness and culinary diversity among our team members.",
+          "HealthSpace's personalized recipe generation has brought culinary diversity and wellness into our home, creating a healthier lifestyle for our entire household.",
         avatar:
           "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/1527/64e0a3f1-37d8-409d-a003-8629a09d0589",
-        alt: "Oberon Shaw",
-        name: "Oberon Shaw, MCH",
-        position: "Head of Talent Acquisition, North America",
+        alt: "Person 3",
+        name: "Marta Fernandez",
+        location: "Madrid, Spain",
       },
     },
   ],
@@ -84,7 +83,7 @@ function SliderItem({ slide, id }: { slide: Testimonial; id: string }) {
 
   return (
     <div id={id} className="relative overflow-hidden w-full mb-8">
-      <div className="bg-cyan-800 text-white rounded-lg shadow-md border border-gray-200 p-6 flex flex-col items-start">
+      <div className="bg-cyan-800 text-white rounded-lg border border-gray-200 p-6 flex flex-col items-start">
         <div className="relative w-8 h-8 mb-4 flex-shrink-0">
           <img src={quotesIcon} alt="Quotation mark" className="absolute top-0 left-0 w-full h-full" />
         </div>
@@ -156,7 +155,7 @@ function Carousel(props: Props) {
   return (
     <div
       id={id}
-      className="min-h-min flex flex-col lg:container md:max-w-6xl lg:mx-auto mx-4 py-12 lg:py-28 bg-white rounded-2xl shadow-md"
+      className="min-h-min flex flex-col lg:container md:max-w-6xl lg:mx-auto mx-4 py-12 lg:py-28 bg-white rounded-2xl"
     >
       <h2 className="text-5xl leading-snug lg:w-1/2 pb-12 lg:pb-16 text-center font-bold text-cyan-800 font-serif">
         {title}
@@ -171,7 +170,7 @@ function Carousel(props: Props) {
           <Slider.Item
             key={index}
             index={index}
-            className="carousel-item max-w-[600px] w-full p-8 bg-cyan-800 rounded-2xl shadow-md"
+            className="carousel-item max-w-[600px] w-full p-8 bg-cyan-800 rounded-2xl"
           >
             <SliderItem slide={slide} id={`${id}::${index}`} />
           </Slider.Item>

@@ -34,7 +34,7 @@ Author URL: https://themeforest.net/user/thememor
 
 .intro-text {
 	color: #045F73;
-	font-family: sans-serif;
+	font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
 	font-weight: 700;
 	margin: 0;
 	letter-spacing: 0.1px;
@@ -45,7 +45,12 @@ Author URL: https://themeforest.net/user/thememor
 	color: #555;
 	line-height: 28px;
 	font-weight: 400;
-	font-family: sans-serif;
+	font-family: ui-serif,
+		Georgia,
+		Cambria,
+		"Times New Roman",
+		Times,
+		serif;
 	letter-spacing: 0.5px;
 }
 
@@ -193,7 +198,12 @@ li {
 	position: fixed;
 	right: 0;
 	left: 0;
-	font-family: sans-serif;
+	font-family: ui-serif,
+		Georgia,
+		Cambria,
+		"Times New Roman",
+		Times,
+		serif;
 	border-width: 0;
 	border-radius: 0;
 	background: transparent;
@@ -476,7 +486,12 @@ li {
 
 .benifits p span {
 	font-size: 48px;
-	font-family: 'Roboto';
+	font-family: ui-serif,
+		Georgia,
+		Cambria,
+		"Times New Roman",
+		Times,
+		serif;
 	font-weight: 100;
 	vertical-align: -moz-middle-with-baseline;
 }
@@ -1783,7 +1798,12 @@ li {
 .faq h4 span {
 	color: #f98169;
 	font-size: 28px;
-	font-family: ubuntu;
+	font-family: ui-serif,
+		Georgia,
+		Cambria,
+		"Times New Roman",
+		Times,
+		serif;
 	font-weight: 300;
 	vertical-align: middle;
 }
@@ -1817,7 +1837,12 @@ li {
 .nav-tabs>li>a {
 	border: none;
 	color: #666;
-	font-family: Roboto;
+	font-family: ui-serif,
+		Georgia,
+		Cambria,
+		"Times New Roman",
+		Times,
+		serif;
 	color: #000;
 	text-transform: uppercase;
 	font-size: 13px;

@@ -34,7 +34,7 @@ Author URL: https://themeforest.net/user/thememor
 
 .intro-text {
 	color: #045F73;
-	font-family: 'Quicksand', sans-serif;
+	font-family: sans-serif;
 	font-weight: 700;
 	margin: 0;
 	letter-spacing: 0.1px;
@@ -45,7 +45,7 @@ Author URL: https://themeforest.net/user/thememor
 	color: #555;
 	line-height: 28px;
 	font-weight: 400;
-	font-family: 'Roboto', sans-serif;
+	font-family: sans-serif;
 	letter-spacing: 0.5px;
 }
 
@@ -193,7 +193,7 @@ li {
 	position: fixed;
 	right: 0;
 	left: 0;
-	font-family: 'Roboto', sans-serif;
+	font-family: sans-serif;
 	border-width: 0;
 	border-radius: 0;
 	background: transparent;

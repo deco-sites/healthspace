@@ -157,7 +157,7 @@ function Carousel(props: Props) {
       id={id}
       className="min-h-min flex flex-col lg:container md:max-w-6xl lg:mx-auto mx-4 py-12 lg:py-28 bg-white rounded-2xl"
     >
-      <h2 className="text-5xl leading-snug lg:w-1/2 pb-12 lg:pb-16 text-center font-bold text-cyan-800 font-serif">
+      <h2 className="text-5xl leading-snug lg:w-1/2 pb-12 lg:pb-16 text-center font-bold text-cyan-900 font-serif">
         {title}
       </h2>
       <Slider

@@ -4,6 +4,8 @@ import Icon from "../components/ui/Icon.tsx";
 import Slider from "../components/ui/Slider.tsx";
 import { useId } from "../sdk/useId.ts";
 
+const quotesIcon = "https://i.ibb.co/xLWNG3N/quotation-marks-icon-1024x892-0619v5k2.png";
+
 /**
  * @titleBy alt
  */
@@ -39,91 +41,66 @@ export interface Props {
 }
 
 const DEFAULT_PROPS = {
-  title: "This is where you'll put your customer testimonials",
+  title: "What Our Clients Say?",
   slides: [
     {
       content: {
         description:
-          "Showcase customer feedback that emphasizes your product or service's key features and addresses prospective clients' concerns. Display endorsements from customer groups that mirror your target audience.",
+          "HealthSpace has transformed our workplace with its innovative personalized recipe generation, making meal planning effortless and enjoyable.",
         avatar:
-          "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/1527/7286de42-e9c5-4fcb-ae8b-b992eea4b78e",
-        alt: "Avatar",
-        name: "Name Surname",
-        position: "Position, Company name",
+          "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/1527/0f78fa1e-c564-485b-a161-7a214c660a9b",
+        alt: "Oberon Shaw",
+        name: "Oberon Shaw, MCH",
+        position: "Head of Talent Acquisition, North America",
       },
     },
     {
       content: {
         description:
-          "Showcase customer feedback that emphasizes your product or service's key features and addresses prospective clients' concerns. Display endorsements from customer groups that mirror your target audience.",
+          "HealthSpace has revolutionized our team's dietary habits with its personalized recipe generation feature, fostering healthier lifestyles and greater productivity.",
         avatar:
           "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/1527/7286de42-e9c5-4fcb-ae8b-b992eea4b78e",
-        alt: "Avatar",
-        name: "Name Surname",
-        position: "Position, Company name",
+        alt: "Oberon Shaw",
+        name: "Oberon Shaw, MCH",
+        position: "Head of Talent Acquisition, North America",
       },
     },
     {
       content: {
         description:
-          "Showcase customer feedback that emphasizes your product or service's key features and addresses prospective clients' concerns. Display endorsements from customer groups that mirror your target audience.",
+          "HealthSpace's personalized recipe generation has been a game-changer for our organization, promoting wellness and culinary diversity among our team members.",
         avatar:
-          "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/1527/7286de42-e9c5-4fcb-ae8b-b992eea4b78e",
-        alt: "Avatar",
-        name: "Name Surname",
-        position: "Position, Company name",
-      },
-    },
-    {
-      content: {
-        description:
-          "Showcase customer feedback that emphasizes your product or service's key features and addresses prospective clients' concerns. Display endorsements from customer groups that mirror your target audience.",
-        avatar:
-          "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/1527/7286de42-e9c5-4fcb-ae8b-b992eea4b78e",
-        alt: "Avatar",
-        name: "Name Surname",
-        position: "Position, Company name",
-      },
-    },
-    {
-      content: {
-        description:
-          "Showcase customer feedback that emphasizes your product or service's key features and addresses prospective clients' concerns. Display endorsements from customer groups that mirror your target audience.",
-        avatar:
-          "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/1527/7286de42-e9c5-4fcb-ae8b-b992eea4b78e",
-        alt: "Avatar",
-        name: "Name Surname",
-        position: "Position, Company name",
+          "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/1527/64e0a3f1-37d8-409d-a003-8629a09d0589",
+        alt: "Oberon Shaw",
+        name: "Oberon Shaw, MCH",
+        position: "Head of Talent Acquisition, North America",
       },
     },
   ],
 };
 
-function SliderItem(
-  { slide, id }: { slide: Testimonial; id: string },
-) {
-  const {
-    content,
-  } = slide;
+function SliderItem({ slide, id }: { slide: Testimonial; id: string }) {
+  const { content } = slide;
 
   return (
-    <div
-      id={id}
-      class="relative overflow-y-hidden w-full min-h-[292px]"
-    >
-      <div class="flex flex-col justify-center gap-16 p-8 border border-base-content rounded-2xl h-full max-w-[600px]">
-        <p class="text-lg">{content?.description}</p>
-        <div class="flex items-center gap-5">
+    <div id={id} className="relative overflow-hidden w-full mb-8">
+      <div className="bg-cyan-800 text-white rounded-lg shadow-md border border-gray-200 p-6 flex flex-col items-start">
+        <div className="relative w-8 h-8 mb-4 flex-shrink-0">
+          <img src={quotesIcon} alt="Quotation mark" className="absolute top-0 left-0 w-full h-full" />
+        </div>
+        <p className="text-lg font-semibold leading-relaxed">{content?.description}</p>
+        <hr className="border-t border-gray-200 my-4 w-full" />
+        <div className="flex items-center space-x-4">
           <Image
-            class="object-cover w-14 h-14 rounded-full"
+            className="w-12 h-12 rounded-full"
             alt={content?.alt}
             src={content?.avatar || ""}
-            width={56}
-            height={56}
+            width={48}
+            height={48}
           />
-          <div class="flex flex-col">
-            <p class="font-semibold text-base">{content?.name}</p>
-            <p class="text-base">{content?.position}</p>
+          <div>
+            <p className="font-bold text-lg">{content?.name}</p>
+            <p className="text-lg">{content?.position}</p>
           </div>
         </div>
       </div>
@@ -131,55 +108,37 @@ function SliderItem(
   );
 }
 
-function Dots({ slides, interval = 0 }: Props) {
+function Dots({ slides }: Props) {
   return (
-    <>
-      <style
-        dangerouslySetInnerHTML={{
-          __html: `
-          @property --dot-progress {
-            syntax: '<percentage>';
-            inherits: false;
-            initial-value: 0%;
-          }
-          `,
-        }}
-      />
-      <ul class="carousel col-span-full gap-3 z-10">
-        {slides?.map((_, index) => (
-          <li class="carousel-item">
-            <Slider.Dot index={index}>
-              <div class="py-5">
-                <div
-                  class="w-2 h-2 rounded-full group-disabled:animate-progress dot"
-                  style={{ animationDuration: `${interval}s` }}
-                />
-              </div>
-            </Slider.Dot>
-          </li>
-        ))}
-      </ul>
-    </>
+    <ul className="carousel col-span-full gap-3 z-10">
+      {slides?.map((_, index) => (
+        <li key={index} className="carousel-item">
+          <div className="py-5">
+            <div className="w-2 h-2 rounded-full bg-cyan-800" />
+          </div>
+        </li>
+      ))}
+    </ul>
   );
 }
 
 function Buttons() {
   return (
-    <div class="flex gap-4">
-      <div class="flex items-center justify-center z-10 col-start-1 row-start-2">
-        <Slider.PrevButton class="flex items-center justify-center btn-circle border border-base-content">
+    <div className="flex gap-4">
+      <div className="flex items-center justify-center z-10 col-start-1 row-start-2">
+        <Slider.PrevButton className="flex items-center justify-center btn-circle border border-cyan-800">
           <Icon
-            class="text-base-content"
+            className="text-cyan-800"
             size={24}
             id="ArrowRight"
             strokeWidth={3}
           />
         </Slider.PrevButton>
       </div>
-      <div class="flex items-center justify-center z-10 col-start-3 row-start-2">
-        <Slider.NextButton class="flex items-center justify-center btn-circle border border-base-content">
+      <div className="flex items-center justify-center z-10 col-start-3 row-start-2">
+        <Slider.NextButton className="flex items-center justify-center btn-circle border border-cyan-800">
           <Icon
-            class="text-base-content"
+            className="text-cyan-800"
             size={24}
             id="ArrowLeft"
             strokeWidth={3}
@@ -197,32 +156,30 @@ function Carousel(props: Props) {
   return (
     <div
       id={id}
-      class="min-h-min flex flex-col lg:container md:max-w-6xl lg:mx-auto mx-4 py-12 lg:py-28"
+      className="min-h-min flex flex-col lg:container md:max-w-6xl lg:mx-auto mx-4 py-12 lg:py-28 bg-white rounded-2xl shadow-md"
     >
-      <h2 class="text-4xl leading-snug lg:w-1/2 pb-12 lg:pb-16">
+      <h2 className="text-5xl leading-snug lg:w-1/2 pb-12 lg:pb-16 text-center font-bold text-cyan-800 font-serif">
         {title}
       </h2>
       <Slider
-        class="carousel carousel-center w-full col-span-full row-span-full gap-6"
+        className="carousel carousel-center w-full col-span-full row-span-full gap-6"
         rootId={id}
-        interval={interval && interval * 1e3}
+        interval={interval && interval * 1000}
         infinite
       >
         {slides?.map((slide, index) => (
           <Slider.Item
+            key={index}
             index={index}
-            class="carousel-item max-w-[600px] w-full"
+            className="carousel-item max-w-[600px] w-full p-8 bg-cyan-800 rounded-2xl shadow-md"
           >
-            <SliderItem
-              slide={slide}
-              id={`${id}::${index}`}
-            />
+            <SliderItem slide={slide} id={`${id}::${index}`} />
           </Slider.Item>
         ))}
       </Slider>
 
-      <div class="flex justify-between pt-8 lg:px-16">
-        {props.dots && <Dots slides={slides} interval={interval} />}{" "}
+      <div className="flex justify-between pt-8 lg:px-16">
+        {props.dots && <Dots slides={slides} />}
         {props.arrows && <Buttons />}
       </div>
     </div>

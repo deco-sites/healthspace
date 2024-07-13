@@ -1,105 +1,172 @@
-export interface CTA {
-  id?: string;
-  href: string;
+export interface Feature {
   text: string;
-  outline?: boolean;
+  includedInBasic?: boolean;
 }
 
-export interface Question {
-  title: string;
-  /** @format rich-text */
-  answer: string;
+export interface Plan {
+  name: string;
+  price: string;
+  features: Feature[];
+  highlight?: boolean;
 }
 
 export interface Props {
   title?: string;
   description?: string;
-  cta?: CTA;
-  questions?: Question[];
+  plans?: Plan[];
 }
 
-export default function BlogPosts({
-  title = "FAQs",
-  description =
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.",
-  cta = { id: "change-me", href: "/", text: "Change me", outline: true },
-  questions = [
+export default function Plans({
+  title = "Our Plans",
+  description = "Choose the plan that suits you best. Each plan comes with personalized recipe generation to fit your needs.",
+  plans = [
     {
-      title: "Question #1 text goes here",
-      answer:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut vestibulum ligula. Nam et tellus sit amet magna convallis interdum. Integer fermentum ligula nec velit hendrerit, quis feugiat odio feugiat. Ut vel nisi auctor, rhoncus felis vitae, tempor metus. Fusce ut lectus et ex consectetur ullamcorper. Nulla facilisi. Proin ullamcorper, odio a consectetur posuere, mauris felis rutrum lectus, et convallis est risus vitae nisi. Suspendisse potenti. Donec ultricies consectetur lorem, eget tempor nisi cursus in. Vivamus at nulla eros. Sed nec malesuada mauris. Curabitur id ex sed neque rutrum tincidunt. Sed sed lectus nec libero eleifend luctus. Aenean convallis feugiat elit, non tincidunt eros vehicula sed. Phasellus pretium urna sit amet risus interdum tempor.",
+      name: "Basic Plan",
+      price: "Free",
+      features: [
+        { text: "Personalized Recipe Generator", includedInBasic: true },
+        { text: "Access to Basic Recipes", includedInBasic: true },
+        { text: "Limited Recipe Storage", includedInBasic: true },
+        { text: "Premium Recipes", includedInBasic: false },
+        { text: "Ad-free Experience", includedInBasic: false },
+        { text: "Priority Support", includedInBasic: false },
+      ],
     },
     {
-      title: "Question #2 text goes here",
-      answer:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut vestibulum ligula. Nam et tellus sit amet magna convallis interdum. Integer fermentum ligula nec velit hendrerit, quis feugiat odio feugiat. Ut vel nisi auctor, rhoncus felis vitae, tempor metus. Fusce ut lectus et ex consectetur ullamcorper. Nulla facilisi. Proin ullamcorper, odio a consectetur posuere, mauris felis rutrum lectus, et convallis est risus vitae nisi. Suspendisse potenti. Donec ultricies consectetur lorem, eget tempor nisi cursus in. Vivamus at nulla eros. Sed nec malesuada mauris. Curabitur id ex sed neque rutrum tincidunt. Sed sed lectus nec libero eleifend luctus. Aenean convallis feugiat elit, non tincidunt eros vehicula sed. Phasellus pretium urna sit amet risus interdum tempor.",
-    },
-    {
-      title: "Question #3 text goes here",
-      answer:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut vestibulum ligula. Nam et tellus sit amet magna convallis interdum. Integer fermentum ligula nec velit hendrerit, quis feugiat odio feugiat. Ut vel nisi auctor, rhoncus felis vitae, tempor metus. Fusce ut lectus et ex consectetur ullamcorper. Nulla facilisi. Proin ullamcorper, odio a consectetur posuere, mauris felis rutrum lectus, et convallis est risus vitae nisi. Suspendisse potenti. Donec ultricies consectetur lorem, eget tempor nisi cursus in. Vivamus at nulla eros. Sed nec malesuada mauris. Curabitur id ex sed neque rutrum tincidunt. Sed sed lectus nec libero eleifend luctus. Aenean convallis feugiat elit, non tincidunt eros vehicula sed. Phasellus pretium urna sit amet risus interdum tempor.",
-    },
-    {
-      title: "Question #4 text goes here",
-      answer:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut vestibulum ligula. Nam et tellus sit amet magna convallis interdum. Integer fermentum ligula nec velit hendrerit, quis feugiat odio feugiat. Ut vel nisi auctor, rhoncus felis vitae, tempor metus. Fusce ut lectus et ex consectetur ullamcorper. Nulla facilisi. Proin ullamcorper, odio a consectetur posuere, mauris felis rutrum lectus, et convallis est risus vitae nisi. Suspendisse potenti. Donec ultricies consectetur lorem, eget tempor nisi cursus in. Vivamus at nulla eros. Sed nec malesuada mauris. Curabitur id ex sed neque rutrum tincidunt. Sed sed lectus nec libero eleifend luctus. Aenean convallis feugiat elit, non tincidunt eros vehicula sed. Phasellus pretium urna sit amet risus interdum tempor.",
-    },
-    {
-      title: "Question #5 text goes here",
-      answer:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut vestibulum ligula. Nam et tellus sit amet magna convallis interdum. Integer fermentum ligula nec velit hendrerit, quis feugiat odio feugiat. Ut vel nisi auctor, rhoncus felis vitae, tempor metus. Fusce ut lectus et ex consectetur ullamcorper. Nulla facilisi. Proin ullamcorper, odio a consectetur posuere, mauris felis rutrum lectus, et convallis est risus vitae nisi. Suspendisse potenti. Donec ultricies consectetur lorem, eget tempor nisi cursus in. Vivamus at nulla eros. Sed nec malesuada mauris. Curabitur id ex sed neque rutrum tincidunt. Sed sed lectus nec libero eleifend luctus. Aenean convallis feugiat elit, non tincidunt eros vehicula sed. Phasellus pretium urna sit amet risus interdum tempor.",
+      name: "Premium Plan",
+      price: "$9.99/month",
+      highlight: true,
+      features: [
+        { text: "Personalized Recipe Generator", includedInBasic: true },
+        { text: "Access to Basic Recipes", includedInBasic: true },
+        { text: "Unlimited Recipe Storage", includedInBasic: false },
+        { text: "Premium Recipes", includedInBasic: false },
+        { text: "Ad-free Experience", includedInBasic: false },
+        { text: "Priority Support", includedInBasic: false },
+      ],
     },
   ],
 }: Props) {
   return (
-    <div class="lg:container md:max-w-6xl lg:mx-auto mx-4 text-sm py-12 lg:py-28">
-      <div class="flex flex-col lg:flex-row gap-10 lg:gap-20 justify-between">
-        <div class="flex-none space-y-6 lg:w-2/5">
-          <p class="text-4xl leading-snug">
-            {title}
-          </p>
-          <p class="text-lg">
-            {description}
-          </p>
-          <a
-            key={cta?.id}
-            id={cta?.id}
-            href={cta?.href}
-            target={cta?.href.includes("http") ? "_blank" : "_self"}
-            class={`font-normal btn btn-primary ${
-              cta.outline && "btn-outline"
-            }`}
-          >
-            {cta?.text}
-          </a>
+    <div className="bg-white text-cyan-900 py-12 lg:py-28 font-serif">
+      <div className="lg:container md:max-w-6xl lg:mx-auto mx-4 text-sm">
+        <div className="text-center mb-12">
+          <h2 className="text-5xl font-extrabold mb-4 text-cyan-900">{title}</h2>
+          <p className="text-lg font-medium text-cyan-900">{description}</p>
         </div>
-        <div class="flex-auto border-primary border-t">
-          {questions?.map((question) => (
-            <details class="border-primary border-b group">
-              <summary class="text-lg cursor-pointer py-6 flex ">
-                <span class="flex-auto">{question.title}</span>
-                <span class="flex-none transition group-open:rotate-180">
-                  <svg
-                    width="32"
-                    height="33"
-                    viewBox="0 0 32 33"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M8.17674 12.5577L8.17676 12.5577L8.5303 12.2041C8.53031 12.2041 8.53031 12.2041 8.53032 12.2041C8.62794 12.1065 8.78621 12.1065 8.88385 12.2041C8.88385 12.2041 8.88385 12.2041 8.88385 12.2041L15.6464 18.9667L16 19.3202L16.3535 18.9667L23.1161 12.2041C23.2138 12.1064 23.372 12.1064 23.4696 12.2041L23.8232 12.5577C23.9208 12.6553 23.9208 12.8135 23.8232 12.9112L16.1767 20.5577C16.0791 20.6553 15.9209 20.6553 15.8232 20.5577L8.17674 12.9112C8.17674 12.9112 8.17674 12.9112 8.17674 12.9112C8.07911 12.8135 8.07911 12.6553 8.17674 12.5577Z"
-                      fill="#18181B"
-                      stroke="#18181B"
-                    />
-                  </svg>
-                </span>
-              </summary>
-              <p
-                class="leading-relaxed mb-6 group-open:animate-fadeIn"
-                dangerouslySetInnerHTML={{ __html: question.answer }}
-              >
-              </p>
-            </details>
+        <div className="flex flex-col lg:flex-row gap-10 lg:gap-20 justify-center">
+          {plans?.map((plan) => (
+            <div
+              key={plan.name}
+              className={`flex flex-col p-8 rounded-2xl shadow-md ${
+                plan.highlight
+                  ? "bg-cyan-800 text-white flex-grow"
+                  : "bg-white text-cyan-800"
+              } ${plan.highlight ? "lg:w-1/3" : "lg:w-2/5"}`}
+            >
+              <h3 className="text-3xl font-extrabold mb-4 text-center">
+                {plan.name}
+              </h3>
+              <p className="text-xl font-semibold mb-6 text-center">{plan.price}</p>
+              {plan.highlight && (
+                <div className="flex items-center justify-center space-x-4">
+                  <ul className="space-y-4 flex-grow">
+                    {plan.features?.map((feature) => (
+                      <li
+                        key={feature.text}
+                        className={`flex items-center ${
+                          plan.highlight
+                            ? "text-white"
+                            : feature.includedInBasic
+                            ? "text-cyan-800"
+                            : "text-gray-400"
+                        }`}
+                      >
+                        <svg
+                          className="w-5 h-5 mr-2"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth="2"
+                            d="M5 13l4 4L19 7"
+                          ></path>
+                        </svg>
+                        <span
+                          className={`text-base ${
+                            !feature.includedInBasic && !plan.highlight && "line-through"
+                          }`}
+                        >
+                          {feature.text}
+                        </span>
+                      </li>
+                    ))}
+                  </ul>
+                  <img
+                    src="https://i.ibb.co/yfgvtQB/image.png"
+                    alt="Premium Plan"
+                    className="w-40 lg:w-56"
+                  />
+                </div>
+              )}
+              {!plan.highlight && (
+                <ul className="space-y-4 flex-grow">
+                  {plan.features?.map((feature) => (
+                    <li
+                      key={feature.text}
+                      className={`flex items-center ${
+                        plan.highlight
+                          ? "text-white"
+                          : feature.includedInBasic
+                          ? "text-cyan-800"
+                          : "text-gray-400"
+                      }`}
+                    >
+                      <svg
+                        className="w-5 h-5 mr-2"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth="2"
+                          d="M5 13l4 4L19 7"
+                        ></path>
+                      </svg>
+                      <span
+                        className={`text-base ${
+                          !feature.includedInBasic && !plan.highlight && "line-through"
+                        }`}
+                      >
+                        {feature.text}
+                      </span>
+                    </li>
+                  ))}
+                </ul>
+              )}
+              {plan.highlight ? (
+                <a
+                  href="/"
+                  className="mt-8 text-center py-3 px-6 bg-white text-cyan-800 font-semibold rounded-lg border border-cyan-800 transition-colors duration-300 hover:bg-gray-100 hover:text-cyan-800"
+                >
+                  Choose Premium
+                </a>
+              ) : (
+                <a
+                  href="/"
+                  className="mt-8 text-center py-3 px-6 bg-white text-cyan-800 font-semibold rounded-lg border border-cyan-800 transition-colors duration-300 hover:bg-gray-100 hover:text-cyan-800"
+                >
+                  Continue with Basic
+                </a>
+              )}
+            </div>
           ))}
         </div>
       </div>

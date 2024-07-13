@@ -25,7 +25,7 @@ export interface Nav {
 export default function Header() {
   return (
     <nav
-      class="block w-full px-6 py-3 flex justify-center space-x-10 text-white bg-[#045F73] bg-opacity-80 backdrop-blur-2xl backdrop-saturate-200">
+      class="block w-full px-6 py-3 flex justify-center space-x-10 text-white bg-cyan-800 bg-opacity-90 backdrop-blur-2xl">
       <ul class="flex flex-col gap-2 my-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6">
         <li class="block mr-16 font-sans text-sm antialiased font-medium leading-normal text-blue-gray-900">
           <Image
@@ -58,7 +58,7 @@ export default function Header() {
           </a>
         </li>
         <button
-            class="rounded-lg bg-[#FFE492] py-3 px-6 text-center align-middle font-sans text-xs font-bold uppercase text-white shadow-md shadow-gray-900/10 transition-all hover:shadow-lg hover:shadow-gray-900/20 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+            class="rounded-lg bg-[#FFE492] py-3 px-6 text-center align-middle font-sans text-xs font-bold uppercase text-black shadow-md shadow-gray-900/10 transition-all hover:shadow-lg hover:shadow-gray-900/20 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
             type="button">
             Login
         </button>
